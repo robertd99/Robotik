@@ -33,16 +33,24 @@
 #
 # Revision $Id$
 
-## Simple talker demo that listens to std_msgs/Strings published 
+## Simple talker demo that listens to std_msgs/Strings published
 ## to the 'chatter' topic
 
+
 import rospy
+import message_filters
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
 from beginner_tutorials.msg import Num
-def callback(data):
+from cv_bridge import CvBridge
+
+
+
+def callback(img_msg, num_msg):
    rospy.loginfo('image published') 
-   rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.data)
+   rospy.loginfo(rospy.get_caller_id() + 'I heard %s', num_msg)
+   pub = rospy.Publisher('imageController',Image,queue_size=1)
+   pub.publish(img_msg)
 
 def listener():
 
@@ -52,11 +60,15 @@ def listener():
     # name for our 'listener' node so that multiple listeners can
     # run simultaneously.
     rospy.init_node('listener', anonymous=True)
+    image_sub = message_filters.Subscriber("image", Image)
+    info_sub = message_filters.Subscriber("value", Num)
 
-    rospy.Subscriber('image', Image, callback)
-    rospy.Subscriber('value', Num, callback)
+    ts = message_filters.TimeSynchronizer([image_sub, info_sub], 10)
+    ts.registerCallback(callback)
+
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
+
 
 if __name__ == '__main__':
     listener()
