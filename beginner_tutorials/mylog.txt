@@ -1,0 +1,54 @@
+... logging to /home/robert/.ros/log/e7384f1c-179d-11eb-9581-1063c8641afc/roslaunch-LAPTOP-U2VDS053-401.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/robert/catkin_ws/src/beginner_tutorials/start.launch
+[1mstarted roslaunch server http://LAPTOP-U2VDS053:51786/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.15.8
+
+NODES
+  /
+    listener (beinner_tutorials/listener.py)
+    talker (beginner_tutorials/talker.py)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/robert/catkin_ws/src/beginner_tutorials/start.launch http://localhost:11311
+[1mprocess[talker-1]: started with pid [415][0m
+[talker-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
+... logging to /home/robert/.ros/log/e7384f1c-179d-11eb-9581-1063c8641afc/roslaunch-LAPTOP-U2VDS053-434.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/robert/catkin_ws/src/beginner_tutorials/start.launch
+[1mstarted roslaunch server http://LAPTOP-U2VDS053:51800/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.15.8
+
+NODES
+  /
+    listener (beginner_tutorials/listener.py)
+    talker (beginner_tutorials/talker.py)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/robert/catkin_ws/src/beginner_tutorials/start.launch http://localhost:11311
+[1mprocess[talker-1]: started with pid [448][0m
+[1mprocess[listener-2]: started with pid [449][0m
+[listener-2] killing on exit
+[talker-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
