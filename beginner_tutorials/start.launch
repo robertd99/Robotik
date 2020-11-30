@@ -1,4 +1,5 @@
 <launch>
   <node name="talker" pkg="beginner_tutorials" type="talker.py"  />
-  <node name="listener" pkg="beginner_tutorials" type="listener.py" output="screen"/> />
+  <node name="listener" pkg="beginner_tutorials" type="listener.py" />
+  <node name="controller" pkg="beginner_tutorials" type="controller.py" output="screen" />
 </launch>
