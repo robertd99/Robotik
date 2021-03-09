@@ -3,10 +3,11 @@ import rospy
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
 from beginner_tutorials.msg import Num
+img_list = []
 def callback(data):
    rospy.loginfo('image to controller published')
-
-
+   img_list.append(data)
+   rospy.loginfo(len(img_list))
 def controller():
 
     # In ROS, nodes are uniquely named. If two nodes with the same

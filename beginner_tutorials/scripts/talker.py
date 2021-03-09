@@ -46,7 +46,7 @@ def talker():
     pub = rospy.Publisher('image', Image, queue_size=1)
     pub_value = rospy.Publisher('value', Num, queue_size=1)
     rospy.init_node('talker', anonymous=True)
-    rate = rospy.Rate(10) # 10hz
+    rate = rospy.Rate(10000) # 10000hz
     while not rospy.is_shutdown():
         bridge = CvBridge()
         unserimage = cv2.imread('/home/robert/catkin_ws/src/beginner_tutorials/scripts/Hullabaloo-Loughborough-Graphics-Design-Blog-Images-0042..jpg')

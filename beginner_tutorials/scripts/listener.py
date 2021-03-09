@@ -48,6 +48,7 @@ from cv_bridge import CvBridge
 
 def callback(img_msg, num_msg):
    rospy.loginfo('image published') 
+   rospy.loginfo(img_msg)
    rospy.loginfo(rospy.get_caller_id() + 'I heard %s', num_msg)
    pub = rospy.Publisher('imageController',Image,queue_size=1)
    pub.publish(img_msg)
