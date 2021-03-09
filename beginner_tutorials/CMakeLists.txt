@@ -113,10 +113,10 @@ catkin_package(
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 #  CATKIN_DEPENDS message_runtime
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime sensor_msgs opencv2 cv_bridge cv2
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime sensor_msgs
 )
 
-catkin_install_python(PROGRAMS scripts/talker.py  scripts/listener.py scripts/controller.py
+catkin_install_python(PROGRAMS scripts/add_two_ints_server.py scripts/add_two_ints_client.py scripts/talker.py  scripts/listener.py scripts/controller.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
