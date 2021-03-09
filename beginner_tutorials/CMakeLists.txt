@@ -17,9 +17,6 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   message_generation
   sensor_msgs
-  opencv2
-  cv2
-  cv_bridge
 )
 
 ## System dependencies are found with CMake's conventions
@@ -63,11 +60,10 @@ find_package(catkin REQUIRED COMPONENTS
  )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   AddTwoInts.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
